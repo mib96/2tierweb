@@ -4,7 +4,7 @@ resource "aws_instance" "two-tier-web-server-1" {
   instance_type   = "t2.micro"
   security_groups = [aws_security_group.two-tier-ec2-sg.id]
   subnet_id       = aws_subnet.two-tier-pub-sub-1.id
-  key_name   = "CICDKEY"
+  key_name   = "YOUR KEY PAIR"
 
   tags = {
     Name = "two-tier-web-server-1"
@@ -25,7 +25,7 @@ resource "aws_instance" "two-tier-web-server-2" {
   instance_type   = "t2.micro"
   security_groups = [aws_security_group.two-tier-ec2-sg.id]
   subnet_id       = aws_subnet.two-tier-pub-sub-2.id
-  key_name   = "CICDKEY"
+  key_name   = "YOUR KEY PAIR"
 
   tags = {
     Name = "two-tier-web-server-2"
